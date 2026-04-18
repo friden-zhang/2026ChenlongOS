@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "author": "OpenAI Codex",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 8.4,
+      "left": -227.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-ili9341",
+      "id": "tft",
+      "top": -8,
+      "left": 116.4,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "uno:5V", "tft:VCC", "red", [ "v42", "h287" ] ],
+    [ "uno:GND.1", "tft:GND", "black", [ "v10", "h306" ] ],
+    [ "uno:10", "tft:CS", "green", [ "h20", "v-80", "h203" ] ],
+    [ "uno:9", "tft:D/C", "yellow", [ "h10", "v-100", "h212" ] ],
+    [ "uno:11", "tft:MOSI", "blue", [ "h30", "v-62", "h196" ] ],
+    [ "uno:13", "tft:SCK", "purple", [ "h42", "v-44", "h180" ] ]
+  ],
+  "dependencies": {}
+}
