@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "author": "OpenAI Codex",
+  "author": "FridenZhang",
   "editor": "wokwi",
   "parts": [
     {
@@ -16,6 +16,18 @@
       "top": -8,
       "left": 116.4,
       "attrs": {}
+    },
+    {
+      "type": "wokwi-logic-analyzer",
+      "id": "logic",
+      "top": 246,
+      "left": -6,
+      "attrs": {
+        "bufferSize": "12000",
+        "triggerMode": "level",
+        "triggerPin": "D7",
+        "triggerLevel": "high"
+      }
     }
   ],
   "connections": [
@@ -24,7 +36,13 @@
     [ "uno:10", "tft:CS", "green", [ "h20", "v-80", "h203" ] ],
     [ "uno:9", "tft:D/C", "yellow", [ "h10", "v-100", "h212" ] ],
     [ "uno:11", "tft:MOSI", "blue", [ "h30", "v-62", "h196" ] ],
-    [ "uno:13", "tft:SCK", "purple", [ "h42", "v-44", "h180" ] ]
+    [ "uno:13", "tft:SCK", "purple", [ "h42", "v-44", "h180" ] ],
+    [ "uno:13", "logic:D0", "purple", [ "v86", "h203", "v140" ] ],
+    [ "uno:11", "logic:D1", "blue", [ "v104", "h196", "v122" ] ],
+    [ "uno:10", "logic:D2", "green", [ "v122", "h190", "v104" ] ],
+    [ "uno:9", "logic:D3", "yellow", [ "v140", "h184", "v86" ] ],
+    [ "uno:7", "logic:D7", "gray", [ "v158", "h165", "v32" ] ],
+    [ "uno:GND.2", "logic:GND", "black", [ "v30", "h127", "v74" ] ]
   ],
   "dependencies": {}
 }
